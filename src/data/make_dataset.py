@@ -11,7 +11,12 @@ def main():
         cleaned data ready to be analyzed (saved in ../processed).
     """
     api = KaggleApi()
-
+    # setup {
+    #   "username": "xxxx",
+    #   "key": "xxxxxx",
+    #   "proxy": "xxxxxxxxxxxxxxxxx"
+    # }
+    # in the .kaggle/kaggle.json 
     api.authenticate()
     json = api.competition_list_files('titanic')
     files = api.competition_download_files('titanic',r"C:\Users\Administrator\Desktop\Git\DataScience\titanic\data\external")
